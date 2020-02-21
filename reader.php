@@ -112,7 +112,10 @@
             <a class="nav-link" href="">重整目前公告 <span class="sr-only">(current)</span></a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="https://me.imych.one/#works">Source Code</a>
+            <a class="nav-link" href="https://me.imych.one/#about">About Me!</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="https://github.com/youualan87/smhs-rss-reader">Source Code</a>
           </li>
       </div>
     </div>
