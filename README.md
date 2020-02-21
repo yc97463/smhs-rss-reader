@@ -2,7 +2,7 @@
 Hi!
 
 ## 動機
-因為校網官網時常邏輯運算當機，故開發了這個網頁來快速瀏覽最新10則公告
+因為校網官網時常邏輯運算當機，故開發了這個網頁並運用 RSS 轉 JSON 來快速讀取、瀏覽最新10則公告
 
 ## 簡介
 網站連結： [https://works.imych.one/smhs-reader/](https://works.imych.one/smhs-reader/)
