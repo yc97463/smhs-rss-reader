@@ -26,37 +26,25 @@
 
   <head><meta http-equiv="Content-Type" content="text/html; charset=utf-8">
 
-    <!--===============================================================================================-->
-
-	<link rel="stylesheet" type="text/css" href="https://cls.iwebs.tw/fonts/font-awesome-4.7.0/css/font-awesome.min.css">
-
-    <!--===============================================================================================-->
-
-    	<link rel="stylesheet" type="text/css" href="https://cls.iwebs.tw/fonts/Linearicons-Free-v1.0.0/icon-font.min.css">
-
-    <!--===============================================================================================-->
-
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
-    <meta name="description" content="<?php echo "{$data['feed']['title']}" ?>">
+    <meta name="description" content="這是可以速覽學校公告的網站，很方便呢！　例如你現在在看<?php echo "{$data['feed']['title']}" ?>">
 
-    <meta property="og:image" content="https://cls.iwebs.tw/readfile?fls=https://blob.iwebs.tw/?uuid=92F61B12-DDC4-36C3-D586-750D217CEE9A">
+    <meta property="og:image" content="https://img.imych.one/works/smhs-reader/images/cover/preview.jpg">
 
-    <link rel="icon" type="image/png" href="https://cls.iwebs.tw/readfile?fls=https://api.imych.one/1021/clsCDN/INDEX/images/icons/favicon.ico"/>
+    <link rel="shortcut icon" type="image/x-icon" href="https://me.imych.one/icon/favicon.ico">
+
+    <link rel="apple-touch-icon" sizes="180x180" href="https://img.imych.one/me/images/youu.png">
+
+    <link rel="icon" type="image/png" sizes="192x192" href="https://img.imych.one/me/images/youu.png">
 
     <meta name="author" content="Youu">
 
-    <title><?php echo "{$data['feed']['title']}" ?></title>
-
-
+    <title>速覽學校公告：<?php echo "{$data['feed']['title']}" ?></title>
 
     <!-- Bootstrap core CSS -->
 
     <link href="https://bootstrap.hexschool.com/docs/4.2/dist/css/bootstrap.css" rel="stylesheet">
-
-
-
-
 
     <style>
 
