@@ -154,6 +154,8 @@
 
             <li><a href="?guid=c24c3cc0-0da5-af66-7e33-3454da076f95">學校法規</a></li>
 
+            <li><a href="?guid=f42a402b-dd6c-5df5-f51d-92b101750752">競賽活動</a></li>
+
             
 
             <hr>
