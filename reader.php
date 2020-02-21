@@ -40,9 +40,9 @@
 
     <meta name="description" content="<?php echo "{$data['feed']['title']}" ?>">
 
-    <meta property="og:image" content="https://cls.imych.one/readfile?fls=https://blob.iwebs.tw/?uuid=92F61B12-DDC4-36C3-D586-750D217CEE9A">
+    <meta property="og:image" content="https://cls.iwebs.tw/readfile?fls=https://blob.iwebs.tw/?uuid=92F61B12-DDC4-36C3-D586-750D217CEE9A">
 
-    <link rel="icon" type="image/png" href="https://cls.imych.one/readfile?fls=https://api.imych.one/1021/clsCDN/INDEX/images/icons/favicon.ico"/>
+    <link rel="icon" type="image/png" href="https://cls.iwebs.tw/readfile?fls=https://api.iwebs.tw/1021/clsCDN/INDEX/images/icons/favicon.ico"/>
 
     <meta name="author" content="Youu">
 
