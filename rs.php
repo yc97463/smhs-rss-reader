@@ -8,9 +8,11 @@
 
     $rss_url = 'http://www.smhs.kh.edu.tw/RssXml.php?Guid=';
 
-    $api_endpoint = 'https://api.rss2json.com/v'.$apiv.'/api.json?rss_url=';
+    $api_endpoint = 'https://rssreader.pan93412.workers.dev/?guid=';
 
-    $data = json_decode( file_get_contents($api_endpoint . urlencode($rss_url . $PageGuid) ) , true );
+    $data = json_decode( file_get_contents($api_endpoint . urlencode($PageGuid) ) , true );
+
+    echo $data;
 
     $data_urlllll = $api_endpoint . urlencode($rss_url . $PageGuid);
 
@@ -19,7 +21,7 @@
     ?>
 
 
-
+<? echo ($api_endpoint . urlencode($PageGuid) );?>
 <!doctype html>
 
 <html lang="tw" class="h-100">
@@ -96,31 +98,23 @@
     <link href="https://bootstrap.hexschool.com/docs/4.2/examples/sticky-footer-navbar/sticky-footer-navbar.css" rel="stylesheet">
 
   </head>
-<?php if($data['status'] != 'ok') {?>
-
-    <div class="alert alert-danger">
-
-       server error.
-    </div> 
-
-<?php ;}else{?>
 <?php if($_GET['mode']=="iframe"){?>
-<?php if($data['items'] == null) {?>
+<?php if(count($data) <= 0) {?>
 
         <div class="alert alert-danger">
 
-            <code><?php echo "{$data['feed']['title']}" ?></code> 看板目前查無內容，請重新確認。
+            <code></code> 看板目前查無內容，請重新確認。
         </div> 
 
     <?php ;}else{?>
-<?php foreach ($data['items'] as $item) { ?>
-    <li><a href="./?mode=reload&uri=<?php echo urlencode("{$item['link']}") ?>" target="_blank"><?php echo "{$item['title']}" ?></a> <?php echo "{$item['pubDate']}" ?></li>
+<?php foreach ($data as $item) { ?>
+    <li><a href="./?mode=reload&uri=<?php echo urlencode("{$item['link']}") ?>" target="_blank"><?php echo "{$item['title']}" ?></a> <?php echo "{$item['isoDate']}" ?></li>
     
 <?php ;};?>
 <?php ;};?>
 <div id="msg_btn" style="float:right;">
     <a href="javascript:location.reload()" data-toggle="modal" data-target="#reload">重新讀取</a> | 
-    <a href="?guid=<?php echo $guid?>&mode=normal" target="_blank">一般預覽模式</a> | 
+    <a href="./?guid=<?php echo $guid?>&mode=normal" target="_blank">一般預覽模式</a> | 
     <a href="./?mode=reload&uri=<?php echo urlencode("http://www.smhs.kh.edu.tw/?Page=Bulletin&Guid={$guid}") ?>" target="_blank">查看更多公告⋯</a>
 </div>
 <div class="modal fade" id="reload" data-backdrop="static" tabindex="-1" role="dialog" aria-hidden="true">
@@ -340,7 +334,7 @@
 
               <div class="card-footer">
 
-                <a href="./?mode=reload&uri=<?php echo urlencode("{$item['link']}") ?>" class="btn btn-primary btn-sm" target="_blank">前往該公告連結</a>
+                <a href="<?php echo "{$item['link']}" ?>" class="btn btn-primary btn-sm" target="_blank">前往該公告連結</a>
 
               </div>
 
@@ -368,7 +362,6 @@
 
 </footer>
 
-<?php ;};?>
 <?php ;};?>
 
       <script>window.jQuery || document.write('<script src="https://bootstrap.hexschool.com/docs/4.2/assets/js/vendor/jquery-slim.min.js"><\/script>')</script><script src="https://bootstrap.hexschool.com/docs/4.2/dist/js/bootstrap.bundle.js"></script>
